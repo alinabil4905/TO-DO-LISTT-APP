@@ -1,4 +1,13 @@
 package com.example.myapplication.Database
 
-class ToDoAppDatabase {
+import androidx.room.*
+import com.example.myapplication.Database.model.TaskModel
+
+
+@Database(entities = [TaskModel::class],version = 1)
+abstract class ToDoAppDatabase:RoomDatabase() {
+
+
+    abstract fun todoappDao():ToDoAppDao
+
 }
