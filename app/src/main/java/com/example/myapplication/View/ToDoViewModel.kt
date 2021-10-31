@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.myapplication.Database.model.TaskModel
 import com.example.myapplication.Repository.ToDoRepository
 import kotlinx.coroutines.launch
-import java.text.DateFormat
+import java.text.SimpleDateFormat
 import java.util.*
 
 class ToDoViewModel:ViewModel() {
@@ -16,9 +16,13 @@ class ToDoViewModel:ViewModel() {
     var task:TaskModel?=null
     var selectedTaskMutableLiveData= MutableLiveData<TaskModel>()
 
-    fun addTask(headline:String,description:String,date:String,taskdone:Boolean){
+    fun addTask(headline:String,description:String,deadline:String,isDone:Boolean,creationdate:String){
+
+
+        val dateFormat = SimpleDateFormat("yyyy/MM/dd")
+        val currentDate = dateFormat.format(Date())
         viewModelScope.launch {
-            todorepository.addTask(TaskModel(headline,description,date,taskdone))
+            todorepository.addTask(TaskModel(headline,description,deadline, false,currentDate))
         }
     }
     fun updateTask(taskModel: TaskModel){

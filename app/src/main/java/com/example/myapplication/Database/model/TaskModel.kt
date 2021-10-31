@@ -2,21 +2,17 @@ package com.example.myapplication.Database.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.*
 
 
 @Entity
 data class TaskModel(
 
-    val headline:String,
-    val description:String,
-    var date: String,
-    var taskdone:Boolean,
+    var headline: String,
+    var description: String,
+    var deadline:String,
+    var isdone: Boolean = false,
+    var creationdate: String,
 
-
-
-
-
-    @PrimaryKey(autoGenerate=true)
-    val id:Int=0
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0
 )

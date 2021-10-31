@@ -52,7 +52,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:backgroundTint="@color/greenish"
+        android:backgroundTint="@color/greenishish"
         android:text="UPDATE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,11 +64,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="DELETE"
-        android:backgroundTint="@color/greenish"
+        android:backgroundTint="@color/greenishish"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/updatebutton"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/creationdatetextview"
+        android:layout_width="221dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="15dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
