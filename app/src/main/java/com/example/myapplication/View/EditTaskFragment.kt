@@ -1,5 +1,6 @@
 package com.example.myapplication.View
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -66,6 +67,25 @@ class EditTaskFragment : Fragment() {
             // If you want to back to the last fragment from where you come here just user the popBackStack method of NavController
             findNavController().popBackStack()
         }
+
+        deleteButton.setOnClickListener {
+            val alertDialog = AlertDialog
+                .Builder(requireActivity())
+                .setTitle("Delete task")
+                .setMessage("Are you sure you want to delete the task?")
+
+            alertDialog.setPositiveButton("Yes") { _, _ ->
+
+
+            }
+
+            alertDialog.setNegativeButton("No") { dialog, _ ->
+                dialog.cancel()
+            }
+
+            alertDialog.create().show()
+        }
+
         updateButton.setOnClickListener {
 
             selectedTask.headline = titleTextView.text.toString()
