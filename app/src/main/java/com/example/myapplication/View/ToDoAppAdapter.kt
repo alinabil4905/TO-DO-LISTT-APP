@@ -2,6 +2,7 @@ package com.example.myapplication.View
 
 import android.graphics.Color
 import android.graphics.Paint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,9 +48,20 @@ class ToDoAppAdapter(val tasks: List<TaskModel>, val viewModel: ToDoViewModel) :
         var deadline=Date()
         val format=SimpleDateFormat("yyyy/MM/dd")
         val date=format.parse(task.deadline)
-        if (deadline>date){
-            holder.cardView.setBackgroundColor(Color.parseColor("#FFC80F0F"))
+        if (deadline>date && !task.isdone){
+            Log.d("DEAD_LINE",task.isdone.toString())
+            holder.cardView.setBackgroundColor(Color.parseColor("#731520"))
+        } else if(task.isdone){
+            Log.d("IS_DONE",task.isdone.toString())
+
+            holder.cardView.setBackgroundColor(Color.parseColor("#90A9AB"))
+        }else {
+            Log.d("IS_DONE",task.isdone.toString())
+
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#B6B6B6"))
         }
+
+        //
 
         if(task.isdone){
             holder.headlineTextView.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
@@ -61,17 +73,24 @@ class ToDoAppAdapter(val tasks: List<TaskModel>, val viewModel: ToDoViewModel) :
 //            viewModel.selectedTaskMutableLiveData.postValue(task)
 //            view.findNavController().navigate(R.id.action_toDoListFragment_to_editTaskFragment2)
 
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#B6B6B6"))
+
             if(holder.taskisdone.isChecked)
             {
                 holder.headlineTextView.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
                 holder.dateTextView.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
                 holder.descriptionTextView.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+                holder.cardView.setBackgroundColor(Color.parseColor("#90A9AB"))
+
             }
             else
             {
+
                 holder.headlineTextView.setPaintFlags(0)
                 holder.descriptionTextView.setPaintFlags(0)
                 holder.dateTextView.setPaintFlags(0)
+                holder.cardView.setBackgroundColor(Color.parseColor("#B6B6B6"))
+
             }
 
             task.isdone = holder.taskisdone.isChecked
