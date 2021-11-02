@@ -48,16 +48,27 @@
         app:layout_constraintTop_toBottomOf="@+id/descriptionaddedittext" />
 
     <Button
+        android:id="@+id/timePickerButton"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/greenishish"
+        android:text="Time"
+        android:textColor="#000000"
+        android:theme="@style/Theme.MaterialComponents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addedittextdate" />
+
+    <Button
         android:id="@+id/savebutton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:backgroundTint="@color/greenishish"
         android:text="SAVE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addedittextdate"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/timePickerButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

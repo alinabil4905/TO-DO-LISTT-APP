@@ -23,7 +23,7 @@
     <EditText
         android:id="@+id/descriptionupdateedittext"
         android:layout_width="300dp"
-        android:layout_height="450dp"
+        android:layout_height="350dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/edittext_shape"
         android:ems="10"
@@ -55,8 +55,9 @@
         android:backgroundTint="@color/greenishish"
         android:text="UPDATE"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateedittextdate" />
+        app:layout_constraintTop_toBottomOf="@+id/timePickerupdateButton" />
 
     <Button
         android:id="@+id/deletebutton"
@@ -80,4 +81,15 @@
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/timePickerupdateButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/greenishish"
+        android:text="TIME"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateedittextdate" />
 </androidx.constraintlayout.widget.ConstraintLayout>
