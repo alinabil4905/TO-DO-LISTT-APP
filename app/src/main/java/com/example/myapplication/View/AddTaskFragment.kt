@@ -48,14 +48,14 @@ class AddTaskFragment : Fragment() {
         datePicker.setOnDateSetListener { view, i, i2, i3 ->
             dateTextView.setText("$i/${i2 + 1}/$i3")
         }
-
+// show calander to user so he can select the date
         dateTextView.setOnClickListener{
             datePicker.show()
         }
 
         val timePickerDialog =
             MaterialTimePicker.Builder().setTimeFormat(TimeFormat.CLOCK_12H).build()//CLOCK_24H
-
+// save all the info enterd by the user
         saveButton.setOnClickListener {
             val title = titleEditText.text.toString()
             val description = descriptionEditText.text.toString()
@@ -67,7 +67,7 @@ class AddTaskFragment : Fragment() {
                 }
         }
 
-
+// show time clock so user can chose
         timePickerButton.setOnClickListener {
             timePickerDialog.show(requireActivity().supportFragmentManager, "fragment_tag")
 

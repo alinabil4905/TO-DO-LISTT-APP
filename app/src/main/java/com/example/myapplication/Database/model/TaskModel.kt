@@ -3,7 +3,9 @@ package com.example.myapplication.Database.model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-
+/***
+TaskModel will represent a row in a TaskModel table in the app database.
+ **/
 @Entity
 data class TaskModel(
 

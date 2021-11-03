@@ -45,6 +45,7 @@ private val todoTasks= mutableListOf<TaskModel>()
                 todoappAdapter.notifyDataSetChanged()
             }
         })
+        // the floating button will navigate to the add fragment
         addFloatingActionButton.setOnClickListener {
 
             findNavController().navigate(R.id.action_toDoListFragment_to_addTaskFragment2)

@@ -50,6 +50,7 @@ class ToDoAppAdapter(val tasks: List<TaskModel>, val viewModel: ToDoViewModel) :
             view.findNavController().navigate(R.id.action_toDoListFragment_to_editTaskFragment2)
 
         }
+        // this code will flag the content of the card and change the color of the card when user press the check box
         var deadline = Date()
         val format = SimpleDateFormat("yyyy/MM/dd")
         val date = format.parse(task.deadline)
@@ -76,8 +77,7 @@ class ToDoAppAdapter(val tasks: List<TaskModel>, val viewModel: ToDoViewModel) :
         }
 
         holder.taskisdone.setOnClickListener {
-//            viewModel.selectedTaskMutableLiveData.postValue(task)
-//            view.findNavController().navigate(R.id.action_toDoListFragment_to_editTaskFragment2)
+
 
             holder.cardView.setCardBackgroundColor(Color.parseColor("#B6B6B6"))
 

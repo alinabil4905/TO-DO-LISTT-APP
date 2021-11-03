@@ -34,7 +34,7 @@ class EditTaskFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_edit_task, container, false)
     }
-
+//
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -78,11 +78,11 @@ class EditTaskFragment : Fragment() {
             }
         })
 
-
+// when the user click the delete button the user will be presented with an alarm so they can accept or cancel
         deleteButton.setOnClickListener {
 
 
-            // If you want to back to the last fragment from where you come here just user the popBackStack method of NavController
+
             val alertDialog = AlertDialog
                 .Builder(requireActivity())
                 .setTitle("Delete task")
@@ -107,7 +107,7 @@ class EditTaskFragment : Fragment() {
         }
 
 
-
+///update will allow the user to update the card with the info they passed
         updateButton.setOnClickListener {
 
             selectedTask.headline = titleTextView.text.toString()

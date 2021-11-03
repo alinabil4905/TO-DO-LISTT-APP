@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navController = navHostFragment.navController
 
-     //   setupActionBarWithNavController(navController)
+
 
     }
 }

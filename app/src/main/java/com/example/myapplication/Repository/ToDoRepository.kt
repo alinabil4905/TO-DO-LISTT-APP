@@ -18,12 +18,14 @@ private val database:ToDoAppDatabase=
     ).fallbackToDestructiveMigration().build()
 
 private val todoappDao= database.todoappDao()
-
+//  gettask fun will give you the list
 fun getTasks()=todoappDao.getTasks()
 
-
+// addtask fun will allow you to add one to a list tasks
     suspend fun addTask(taskModel: TaskModel) = todoappDao.addtask(taskModel)
+    // updateTask fun will allow you to update item saved
     suspend fun updateTask(taskModel: TaskModel) = todoappDao.updateTask(taskModel)
+
     suspend fun deleteTask(taskModel: TaskModel) = todoappDao.deletetask(taskModel)
 
 
