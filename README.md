@@ -21,6 +21,8 @@ What's Next is an android app that will help you stay organised. When you write 
 Figma
 ---|
 
+[Figma Link](https://www.figma.com/proto/tMfYEIOPz72CZn7kaMBNnw/Untitled?page-id=0%3A1&node-id=10%3A13&viewport=241%2C48%2C0.36&scaling=scale-down&starting-point-node-id=10%3A13)
+
 
 ![figma](https://user-images.githubusercontent.com/89555985/140072218-43388daa-9b98-4490-a167-4e33e326fb2c.png)
 
