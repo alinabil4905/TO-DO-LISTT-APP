@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -25,6 +26,7 @@ class EditTaskFragment : Fragment() {
     private val toDoViewModel: ToDoViewModel by activityViewModels()
     private lateinit var selectedTask: TaskModel
 
+    var duetime = ""
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -54,7 +56,11 @@ class EditTaskFragment : Fragment() {
         }
 
         val timePickerDialog =
-            MaterialTimePicker.Builder().setHour(5).setTimeFormat(TimeFormat.CLOCK_12H).build()//CLOCK_24H
+            MaterialTimePicker.Builder().setTimeFormat(TimeFormat.CLOCK_12H).build()//CLOCK_24H
+
+        timePickerDialog.addOnPositiveButtonClickListener {
+            duetime = "${timePickerDialog.hour}:${timePickerDialog.minute}"
+        }
         timePickerButton.setOnClickListener {
             timePickerDialog.show(requireActivity().supportFragmentManager, "fragment_tag")
         }
@@ -84,6 +90,7 @@ class EditTaskFragment : Fragment() {
 
             alertDialog.setPositiveButton("Yes") { _, _ ->
                 toDoViewModel.deleteTask(selectedTask)
+                findNavController().popBackStack()
 
             }
 
@@ -91,8 +98,8 @@ class EditTaskFragment : Fragment() {
                 dialog.cancel()
             }
 
+
             alertDialog.create().show()
-            findNavController().popBackStack()
 
 
 
@@ -107,17 +114,17 @@ class EditTaskFragment : Fragment() {
             selectedTask.description = descriptionTextView.text.toString()
             selectedTask.deadline = dateTextView.text.toString()
 
-            var duetime = ""
-            if(timePickerDialog.hour != 0)
-
-                duetime = "${timePickerDialog.hour}:${timePickerDialog.minute}"
-             else
-                duetime = selectedTask.deadlinetime
 
 
-            selectedTask.deadlinetime = duetime
 
-            toDoViewModel.updateTask(selectedTask)
+            if(duetime.isNotEmpty())
+                selectedTask.deadlinetime = duetime
+
+
+                toDoViewModel.updateTask(selectedTask)
+
+
+
             findNavController().popBackStack()
         }
 

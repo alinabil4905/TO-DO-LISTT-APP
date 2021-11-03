@@ -45,7 +45,8 @@
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionaddedittext" />
+        app:layout_constraintTop_toBottomOf="@+id/descriptionaddedittext"
+        android:focusableInTouchMode="false"/>
 
     <Button
         android:id="@+id/timePickerButton"

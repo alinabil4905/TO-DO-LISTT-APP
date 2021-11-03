@@ -49,7 +49,7 @@ class AddTaskFragment : Fragment() {
             dateTextView.setText("$i/${i2 + 1}/$i3")
         }
 
-        dateTextView.setOnFocusChangeListener { i, b ->
+        dateTextView.setOnClickListener{
             datePicker.show()
         }
 
