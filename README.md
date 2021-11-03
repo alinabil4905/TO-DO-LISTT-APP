@@ -38,18 +38,84 @@ Figma
 
 <hr> 
 
-## Favorite Part of My Work 
+
+
+
+## App screenshots
+
+<br>
+
+![Screenshot1](https://user-images.githubusercontent.com/89555985/140085497-c2672ebe-5a40-48fb-a6d5-f0a8f562fb13.png)
+
 
 <hr>
-## App screenshots
+
+
+
+![Screenshot6](https://user-images.githubusercontent.com/89555985/140089740-37d7f299-3b22-4f62-9c8b-dafd47c6565b.png)
+
+
+
 <hr>
-![Screenshot1](https://user-images.githubusercontent.com/89555985/140085497-c2672ebe-5a40-48fb-a6d5-f0a8f562fb13.png)
-<hr>
+
+
+
 ![Screenshot2](https://user-images.githubusercontent.com/89555985/140085729-395da80b-b306-470c-82de-a7ed946522f8.png)
+
+
 <hr>
+
+
+
 ![Screenshot 3png](https://user-images.githubusercontent.com/89555985/140085781-5446ea88-576c-44f4-8646-c31c40923e7c.png)
+
+
+
 <hr>
+
+
+
+
 ![Screenshot 4](https://user-images.githubusercontent.com/89555985/140085843-bc57d4e1-c31d-4c93-b8ed-9ec5d07d9b3b.png)
+
+
+
+
 <hr>
+
+
+
 ![Screenshot 5](https://user-images.githubusercontent.com/89555985/140085889-94ea1d50-e399-4768-837b-a3b2673ead32.png)
+
+
+
+
 <hr>
+
+## Problems and future Functions
+
+# problems:
+
+- Time is not Shown in the Add and Edit Fragments
+
+# Future  functions:
+
+- Notify the user when the task is due
+- Chose the task location 
+
+<hr>
+
+
+### Favoraite Features 
+
+
+- Adding tasks - You can add as many tasks as you want.
+- Creation date - When you create a task, the app will automatically post the date when it was created.
+- Task card color - when the task pass the due date the color changes form the original color, also the card change color when you press the done check box.
+- Task deletion - You can delete any task using the delete icon in the card, or use the delete button in the edite fragment.
+- Editing tasks - Using the update feature, you may change the task title,description,date and time.
+
+
+
+
+
